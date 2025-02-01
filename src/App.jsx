@@ -1,13 +1,31 @@
-import React, { Component } from "react";
+// packages
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        App
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <h2>yana test</h2>
-      </div>
-    );
-  }
+// layouts
+import RootLayout from "./layouts/RootLayout";
+
+// pages
+import Home from "./pages/Home";
+
+function App() {
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
+  return (
+    <div className="App">
+      <RouterProvider router={routes} />
+    </div>
+  );
 }
+
+export default App;
