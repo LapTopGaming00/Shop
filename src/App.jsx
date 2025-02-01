@@ -20,6 +20,7 @@ export default class App extends Component {
 <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam aperiam commodi asperiores excepturi, facilis veniam consequatur corporis earum illo tempore.</h3>
     
     <h4>siuuuuuu</h4>
+    <h6>Salom!</h6>
       </div>
 
 
